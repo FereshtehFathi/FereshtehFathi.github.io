@@ -195,6 +195,31 @@
   }
   .skill-group li:last-child{border-bottom:none;}
 
+  /* ---------- Documents ---------- */
+  .doc-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+  }
+  .doc-card{display:block;text-decoration:none;color:var(--ink);}
+  .doc-card img{
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:var(--bg-raise);
+    display:block;
+    transition:opacity .15s;
+  }
+  .doc-card:hover img{opacity:0.85;}
+  .doc-caption{
+    margin-top:10px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    color:var(--muted);
+  }
+
   /* ---------- Timeline ---------- */
   .tl-item{
     display:grid;
@@ -235,6 +260,7 @@
     header{padding:80px 0 56px;flex-direction:column-reverse;gap:22px;}
     .avatar{width:84px;height:84px;}
     .skill-grid{grid-template-columns:1fr;}
+    .doc-grid{grid-template-columns:1fr 1fr;gap:14px;}
     .tl-item{grid-template-columns:80px 1fr;}
   }
 
@@ -327,8 +353,31 @@
     </div>
   </section>
 
+  <section id="documents">
+    <div class="kicker">04 — Documents</div>
+    <h2>Certificates</h2>
+    <div class="doc-grid">
+      <a class="doc-card" href="./ielts.jpg" target="_blank">
+        <img src="./ielts.jpg" alt="IELTS Academic certificate — overall 7.5">
+        <div class="doc-caption">IELTS Academic — 7.5</div>
+      </a>
+      <a class="doc-card" href="./cert-neuromatch.jpg" target="_blank">
+        <img src="./cert-neuromatch.jpg" alt="Neuromatch Academy certificate">
+        <div class="doc-caption">Neuromatch Academy — Computational Neuroscience</div>
+      </a>
+      <a class="doc-card" href="./cert-interdisciplinary.jpg" target="_blank">
+        <img src="./cert-interdisciplinary.jpg" alt="Interdisciplinary Schools certificate">
+        <div class="doc-caption">Interdisciplinary Schools — Neuroscience &amp; Cognitive Sciences</div>
+      </a>
+      <a class="doc-card" href="./cert-neurofeedback.jpg" target="_blank">
+        <img src="./cert-neurofeedback.jpg" alt="Introduction to Neurofeedback certificate">
+        <div class="doc-caption">Introduction to Neurofeedback</div>
+      </a>
+    </div>
+  </section>
+
   <section id="timeline">
-    <div class="kicker">04 — Education</div>
+    <div class="kicker">05 — Education</div>
     <h2>Timeline</h2>
 
     <div class="tl-item">
@@ -364,7 +413,7 @@
   </section>
 
   <footer id="contact">
-    <div class="kicker">05 — Contact</div>
+    <div class="kicker">06 — Contact</div>
     <h2>Get in touch</h2>
     <p class="muted">Open to conversations about graduate research opportunities, collaborations, or questions about my work.</p>
     <div class="contact-links">
