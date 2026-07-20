@@ -10,13 +10,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#FAFAF7;
-    --ink:#1B1F23;
-    --muted:#5B6470;
-    --accent:#2E6F6E;
+    --bg:#F6F1F8;
+    --ink:#25202B;
+    --muted:#6E6577;
+    --accent:#7A5C8E;
     --signal:#B8543F;
-    --line:#DEDFD9;
-    --bg-raise:#F2F2ED;
+    --line:#E1D5E6;
+    --bg-raise:#EEE3F1;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -30,7 +30,22 @@
   .wrap{max-width:760px;margin:0 auto;padding:0 28px;}
 
   /* ---------- Header / Hero ---------- */
-  header{padding:120px 0 80px;}
+  header{
+    padding:120px 0 80px;
+    display:flex;
+    align-items:flex-start;
+    gap:32px;
+  }
+  .hero-text{flex:1;min-width:0;}
+  .avatar{
+    width:104px;
+    height:104px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+    border:1px solid var(--line);
+    background:var(--bg-raise);
+  }
   .eyebrow{
     font-family:'IBM Plex Mono',monospace;
     font-size:13px;
@@ -217,7 +232,8 @@
   }
 
   @media (max-width:560px){
-    header{padding:80px 0 56px;}
+    header{padding:80px 0 56px;flex-direction:column-reverse;gap:22px;}
+    .avatar{width:84px;height:84px;}
     .skill-grid{grid-template-columns:1fr;}
     .tl-item{grid-template-columns:80px 1fr;}
   }
@@ -235,15 +251,18 @@
 <div class="wrap">
 
   <header>
-    <div class="eyebrow">Research Portfolio</div>
-    <h1>Fereshteh Fathiziarani</h1>
-    <p class="role">Cognitive neuroscience researcher — functional connectivity, RSA, and the neural basis of psychiatric and visual cognition.</p>
-    <div class="hero-links">
-      <a href="mailto:fereshtefathiz79@gmail.com">Email</a>
-      <a href="./cv.pdf" target="_blank">CV (PDF)</a>
-      <a href="https://github.com/FereshtehFathi" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/fereshtefathiz79" target="_blank">linkedin.com/in/fereshtefathiz79</a>
+    <div class="hero-text">
+      <div class="eyebrow">Research Portfolio</div>
+      <h1>Fereshteh Fathiziarani</h1>
+      <p class="role">Cognitive neuroscience researcher — functional connectivity, RSA, and the neural basis of psychiatric and visual cognition.</p>
+      <div class="hero-links">
+        <a href="mailto:fereshtefathiz79@gmail.com">Email</a>
+        <a href="./cv.pdf" target="_blank">CV (PDF)</a>
+        <a href="https://github.com/FereshtehFathi" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/fereshtefathiz79" target="_blank">LinkedIn</a>
+      </div>
     </div>
+    <img class="avatar" src="./photo.jpg" alt="Fereshteh Fathiziarani">
   </header>
 
   <svg class="signal" viewBox="0 0 760 56" preserveAspectRatio="none" aria-hidden="true">
@@ -315,6 +334,7 @@
     <div class="tl-item">
       <div class="tl-date">2027 (target)</div>
       <div class="tl-body">
+        <strong>MSc, Cognitive Neuroscience</strong>
       </div>
     </div>
 
